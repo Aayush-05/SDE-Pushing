@@ -1,0 +1,16 @@
+// Title: Partition Array Such That Maximum Difference Is K
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/partition-array-such-that-maximum-difference-is-k/
+
+        count = 1
+        start = nums[0]
+
+        for i in range(1, len(nums)):
+            if nums[i] - start > k:
+                count += 1
+                start = nums[i]
+        return count
+class Solution:
+    def partitionArray(self, nums: List[int], k: int) -> int:
+        nums.sort()

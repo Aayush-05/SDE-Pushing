@@ -1,0 +1,19 @@
+// Title: Maximum Manhattan Distance After K Changes
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes/
+
+            elif it == "W":
+                west += 1
+            times1 = min(north, south, k)  # modification times for 
+            elif it == "E":
+                east += 1
+            if it == "N":
+                north += 1
+            elif it == "S":
+                south += 1
+        ans = 0
+        north = south = east = west = 0
+        for it in s:
+class Solution:
+    def maxDistance(self, s: str, k: int) -> int:

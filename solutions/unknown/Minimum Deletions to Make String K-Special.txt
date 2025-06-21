@@ -1,0 +1,19 @@
+// Title: Minimum Deletions to Make String K-Special
+            // Difficulty: Unknown
+            // Language: Python3
+            // Link: https://leetcode.com/problems/minimum-deletions-to-make-string-k-special/
+
+class Solution:
+    def minimumDeletions(self, word: str, k: int) -> int:
+        freq = Counter(word)
+        freqs = sorted(freq.values())
+        min_del = float('inf')
+        for i in range(len(freqs)):
+            target = freqs[i]
+            count = 0
+            for f in freqs:
+                if f < target:
+                    count += f
+                elif f > target + k:
+                    count += (f-(target + k))
+            min_del = min(min_del, count)

@@ -1,0 +1,14 @@
+// Title: Longest Harmonious Subsequence
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/longest-harmonious-subsequence/
+
+class Solution(object):
+    def findLHS(self, nums):
+        from collections import Counter
+        freq = Counter(nums)
+        max_len = 0
+        for key in freq:
+            if key + 1 in freq:
+                max_len = max(max_len, freq[key] + freq[key + 1])
+        return max_len

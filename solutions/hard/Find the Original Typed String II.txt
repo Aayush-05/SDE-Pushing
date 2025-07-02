@@ -1,0 +1,29 @@
+// Title: Find the Original Typed String II
+            // Difficulty: Hard
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-the-original-typed-string-ii/
+
+
+        ans = 1
+        for o in freq:
+            ans = ans * o % mod
+
+        if len(freq) >= k:
+            return ans
+
+        f, g = [1] + [0] * (k - 1), [1] * k
+        for i in range(len(freq)):
+            f_new = [0] * k
+        freq.append(cnt)
+                cnt = 1
+                freq.append(cnt)
+            else:
+                cnt += 1
+            if word[i] == word[i - 1]:
+
+        for i in range(1, n):
+    def possibleStringCount(self, word: str, k: int) -> int:
+        mod = 10**9 + 7
+        n, cnt = len(word), 1
+        freq = list()
+class Solution:

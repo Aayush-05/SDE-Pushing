@@ -1,0 +1,13 @@
+// Title: Find the K-th Character in String Game II
+            // Difficulty: Hard
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/
+
+class Solution:
+    def kthCharacter(self, k: int, operations: List[int]) -> str:
+        ans = 0
+        k -= 1
+        for i in range(k.bit_length() - 1, -1, -1):
+            if (k >> i) & 1:
+                ans += operations[i]
+        return chr(ord("a") + (ans % 26))
